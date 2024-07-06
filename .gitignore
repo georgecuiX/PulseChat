@@ -49,3 +49,17 @@ dist/
 
 # ASP.NET Scaffolding
 .scaffolding/
+
+# Angular specific
+.angular/
+.vscode/
+dist/
+tmp/
+temp/
+ssr/
+
+# node.js specific
+node_modules/
+npm-debug.log
+yarn-error.log
+lerna-debug.log
