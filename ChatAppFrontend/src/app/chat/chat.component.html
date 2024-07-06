@@ -2,7 +2,9 @@
     <input [(ngModel)]="user" placeholder="User Name" />
     <input [(ngModel)]="message" placeholder="Message" />
     <button (click)="sendMessage()">Send</button>
-</div>
-<div *ngFor="let msg of messages">
-    {{ msg }}
-</div>
+    <button (click)="sendMessageToBot()">Send to Bot</button>
+  </div>
+  <div *ngFor="let msg of signalRService.messages">
+    <strong>{{ msg.user }}:</strong> {{ msg.message }}
+  </div>
+  

@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SignalRService {
   private _hubConnection: signalR.HubConnection | undefined;
+  public messages: { user: string, message: string }[] = [];
+
+  constructor(private http: HttpClient) {}
 
   public startConnection = () => {
     this._hubConnection = new signalR.HubConnectionBuilder()
@@ -18,9 +22,19 @@ export class SignalRService {
   public addTransferChartDataListener = () => {
     if (this._hubConnection) {
       this._hubConnection.on('ReceiveMessage', (user, message) => {
-        console.log(`${user}: ${message}`);
+        this.messages.push({ user, message });
       });
     }
+  }
+
+  public getMessages() {
+    this.http.get<{ user: string, message: string }[]>('https://localhost:5001/api/chat/messages')
+      .subscribe(messages => this.messages.push(...messages));
+  }
+
+  public sendMessageToBot(message: string) {
+    this._hubConnection?.invoke('SendMessageToBot', 'User', message)
+      .catch(err => console.error(err));
   }
 
   public get hubConnection(): signalR.HubConnection | undefined {
