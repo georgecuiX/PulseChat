@@ -25,10 +25,10 @@ Database: SQLite
 ## Installation
 
 ### Clone the repository:
-'''
+```
 git clone https://github.com/your-username/real-time-chat-app.git
 cd real-time-chat-app
-'''
+```
 
 ### Frontend Setup:
 ```
@@ -38,35 +38,34 @@ npm start
 ```
 
 ### Backend Setup:
-'''
+```
 cd ../ChatAppBackend
 dotnet restore
 dotnet build
 dotnet run
-'''
+```
 
 ### AI Chatbot Setup:
+```
 cd ../Chatbot
 pip install -r requirements.txt
 python chatbot.py
+```
 
-### Usage
-Navigate to http://localhost:4200 to access the frontend interface.
-The backend will be running on http://localhost:5000.
-Ensure the AI chatbot server is running and accessible.
+## Usage
+* Navigate to http://localhost:4200 to access the frontend interface.
+* The backend will be running on http://localhost:5000.
+* Ensure the AI chatbot server is running and accessible.
 
 ### Troubleshooting
-If you encounter CORS issues, ensure the backend CORS policy is correctly configured.
-Ensure all services (frontend, backend, and chatbot) are running without errors.
-Contribution
-Feel free to fork this repository and contribute by submitting pull requests. Any enhancements, bug fixes, and additional features are welcome.
+* If you encounter CORS issues, ensure the backend CORS policy is correctly configured.
+* Ensure all services (frontend, backend, and chatbot) are running without errors.
 
 ### License
 This project is licensed under the MIT License.
 
 ## Future Enhancements
-User Profiles: Implement user profile management.
-Group Chat: Enable group chat functionality.
-File Sharing: Allow users to share files within the chat.
-Notifications: Add real-time notifications for new messages and events.
-Stay tuned for more updates as the application evolves.
+* User Profiles: Implement user profile management.
+* Group Chat: Enable group chat functionality.
+* File Sharing: Allow users to share files within the chat.
+* Notifications: Add real-time notifications for new messages and events.
