@@ -26,8 +26,8 @@ Database: SQLite
 
 ### Clone the repository:
 ```
-git clone https://github.com/your-username/real-time-chat-app.git
-cd real-time-chat-app
+git clone https://github.com/your-username/PulseChat.git
+cd PulseChat
 ```
 
 ### Frontend Setup:
