@@ -1,5 +1,7 @@
 # PulseChat
 
+![depositphotos_167063128-stock-photo-businessman-chatting-with-chatbot-application](https://github.com/georgecuiX/PulseChat/assets/89486336/2274c959-5e3e-40dd-b775-427cafe02fba)
+
 ## Description
 This project is a real-time chat application leveraging .NET SignalR for instant communication, Angular for the frontend interface, and a Python AI chatbot for interactive responses.
 
