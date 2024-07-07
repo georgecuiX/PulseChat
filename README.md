@@ -11,33 +11,39 @@ AI Chatbot: Python
 Database: SQLite
 
 ## Functionalities
-Real-time Messaging: Instant messaging between users using SignalR.
-AI Chatbot Integration: A Python-based AI chatbot that responds to user queries.
-User Authentication: Secure login and registration functionality.
-Message History: Persistent storage of chat history using SQLite.
-User Interface: A clean and responsive UI built with Angular.
+* Real-time Messaging: Instant messaging between users using SignalR.
+* AI Chatbot Integration: A Python-based AI chatbot that responds to user queries.
+* User Authentication: Secure login and registration functionality.
+* Message History: Persistent storage of chat history using SQLite.
+* User Interface: A clean and responsive UI built with Angular.
 
 ## Prerequisites
-Node.js and npm
-.NET SDK
-Python 3.x
+* Node.js and npm
+* .NET SDK
+* Python 3.x
 
 ## Installation
 
 ### Clone the repository:
+'''
 git clone https://github.com/your-username/real-time-chat-app.git
 cd real-time-chat-app
+'''
 
 ### Frontend Setup:
+```
 cd ChatAppFrontend
 npm install
 npm start
+```
 
 ### Backend Setup:
+'''
 cd ../ChatAppBackend
 dotnet restore
 dotnet build
 dotnet run
+'''
 
 ### AI Chatbot Setup:
 cd ../Chatbot
